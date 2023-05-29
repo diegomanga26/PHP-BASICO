@@ -86,5 +86,40 @@
      * *Recursos(resource): Se usa para almacenar referencias o recursos externos, como archivos o conexiones.
      * *Nulo(null): Se usan para almacenar variables sin valor.
      */
-
+    /**
+     * ?NÚMEROS Y OPERADORES:
+     */
+    /**
+     * *Operadores aritmeticos:
+     * * + = Suma.
+     * * - = Resta.
+     * * * = Multiplicación.
+     * * / = División.
+     * * % = Módulo.
+     * * ** = Exponenciación.
+     */
+    /**
+     * *Operadores de asignación:
+     * * = "Igual a.
+     */
+    /**
+     * *Operadores de matriz:
+     * * + = Unión.
+     * * == = Igualdad.
+     * * === = Identidad (Cumplir con 3 condiciones).
+     * * != = Desigualdad.
+     * * <> = Desigualdad.
+     * * !== = No identidad (No cumplir con 3 condiciones).
+     */
+    /**
+     * *Operador Bit a Bit:
+     * * & = "Y".
+     * * ^ = "O".
+     * * | = "no".
+     * * << = Desplazar a la izquierda.
+     * * >> = Desplazar a la derecha.
+     */
+    /**
+     * *
+     */
 ?>
