@@ -425,7 +425,7 @@
      * * Este método es utilizado para agregar uno o más elementos al final de un array.
      */
 
-    $diego= array("Diego" => array("Edad" => 23, "Ciudad" => "Valledupar", "País" => "Colombia"));
+    $diego = array("Andres" => array("Edad" => 33, "Ciudad" => "Barranquilla", "País" => "Colombia"));
     array_push($personas, $diego);
     print_r($personas);
     echo "<hr>";
@@ -435,6 +435,88 @@
      * * Este método es utilizado para eliminar valores duplicados de un array.
      */
 
-    print_r(array_unique($personas));
+    array_push($numeritosImpares, 1);
+    print_r($numeritosImpares);
+    echo "<hr>";
+    print_r(array_unique($numeritosImpares));
 
+    /**
+     * * 11) Método array_intersect():
+     * * Este método es utilizado para devolver un array con los valores comunes (repetidos) de todos los array dados.
+     */
+
+    $grupoNum1 = array(1, 2, 3, 4, 5);
+    $grupoNum2 = array(2, 4, 6, 8, 10);
+    $grupoNum3 = array(4, 5, 9, 10);
+    echo "<hr>";
+    print_r(array_intersect($grupoNum1, $grupoNum2, $grupoNum3));
+
+    /**
+     * * 12) Método array_diff():
+     * * Este método es utilizado para encontrar la diferecia entre dos o mas array, se encarga de buscar elementos que
+     * * estan presentes en el primer array pero no en el resto.
+     */
+
+    echo "<hr>";
+    print_r(array_diff($grupoNum1, $grupoNum2, $grupoNum3));
+
+    /**
+     * * 13) Método array_pop():
+     * * Este método es utilizado para extraer y eliminar el ultimo elemento de un array.
+     */
+
+    echo "<hr>";
+    print_r(array_pop($grupoNum2));
+    
+    /**
+     * * 14) Método array_reverse():
+     * * Este método es utilizado para invertir el orden de los elementos de un array.
+     */
+
+    echo "<hr>";
+    print_r(array_reverse($grupoNum1));
+
+    /**
+     * * 15) Método array_sum():
+     * * Este método es utilizado para calcular la suma de todos los valores numericos de un array.
+     */
+
+    echo "<hr>";
+    print_r(array_sum($grupoNum3));
+
+    /**
+     * * 16) Método array_chunk():
+     * * Este método es utilizado para dividir el array en pequeños fragmentos.
+     * ?Se agrega el array a dividir y despues de la coma la cantidad de fragmentos que se deseen.
+     */
+
+    echo "<hr>";
+    $letras = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h');
+    print_r(array_chunk($letras, 3));
+
+    /**
+     * * 17) Método array_keys():
+     * * Este método es utilizado para obtener todas las keys de un array.
+     */
+
+    echo "<hr>";
+    print_r(array_keys($personas));
+
+    /**
+     * * 18) Método array_values():
+     * * Este método es utilizado para obtener todos los valores de un array.
+     */
+
+    echo "<hr>";
+    print_r(array_values($personas));
+
+    /**
+     * * 19) Método array_walk():
+     * * Este método es utilizado para aplicar una funcion callback a cada elemento del array.
+     *  ?Tener en cuenta la utilizacion de "&".
+     */
+
+    echo "<hr>";
+    array_walk($grupoNum1, fn(&$incremento,$llave) => $incremento++);
+    print_r($grupoNum1);
 ?>
