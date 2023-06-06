@@ -519,4 +519,52 @@
     echo "<hr>";
     array_walk($grupoNum1, fn(&$incremento,$llave) => $incremento++);
     print_r($grupoNum1);
+
+    /**
+     * ?ISSET() Y EMPTY():
+     */
+
+    /**
+     * * 1) Isset():
+     * * Esta función es utilizada para verificar la existencia o definición de una variable.
+     * * Esta toma uno o más argumentos y devuelve true o false si están definidos o son nulos.
+     */
+
+    echo "<hr>";
+    $name = "";
+    if (isset($name)) {
+        echo "La variable 'name' si está definida.";
+    } else {
+        echo "La variable 'name' NO está definida.";
+    };
+
+    /**
+     * * 2) Empty():
+     * * Esta función es utilizada para comprobar si una variable está vacía.
+     * * Se considera vacía si no está definida, es nula, es vacía o su valor numérico es 0.
+     * * Al igual que "Isset()" esta devuelve un booleano true o false.
+     */
+
+    echo "<hr>";
+    if (empty($name)) {
+        echo "La variable 'name' está vacía";
+    } else {
+        echo "La variable 'name' NO está vacía";
+    };
+    
+    /**
+     * ?ORDENAR ELEMENTOS DE UN ARRAY:
+     */
+
+    /**
+     * * 1) De menor a mayor y de mayor a menor:
+     */
+
+    echo "<hr>";
+    $numbers = array(1,4,5,7,8);
+    echo "<pre>";
+    print_r(sort($numbers));
+    echo "</pre>";
+    echo "<hr>";
+    print_r(rsort($numbers));
 ?>
